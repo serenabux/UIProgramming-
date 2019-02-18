@@ -1,0 +1,167 @@
+body{
+background-color: #E8E8E8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:Arial;
+}
+
+#place{
+	background: white;
+	font-size: 2.5em;	
+}
+
+
+#spinButton {
+	margin:auto;
+	padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+#spinButton:hover {background-color: #3e8e41}
+
+#spinButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@media screen and (orientation: landscape) {
+  .content{
+  	display: inline-block;
+  	float:left;
+  }
+  #writtenContent{
+  	width:35%;
+  	padding-top:12%;
+  }
+  #wheel{
+  	margin-top: -20px;
+  		/*image resize: https://stackoverflow.com/questions/4684304/how-can-i-resize-an-image-dynamically-with-css-as-the-browser-width-height-chang*/
+	max-width: 500px;
+	width: 65%;
+  	height: auto;
+  }
+  #images{
+  	width: 65%;
+  	height: auto;
+  }
+  #pointer{
+  	margin-top: -20px;
+  		/*image resize: https://stackoverflow.com/questions/4684304/how-can-i-resize-an-image-dynamically-with-css-as-the-browser-width-height-chang*/
+	max-width: 30px;
+
+	width: 40%;
+  	height: auto;
+  	margin-left: 28%;
+  }
+
+  h1{
+	text-align: center;
+	font-size: 3em;
+	}
+  h4{
+	text-align: center;
+	margin-top: -10px;
+	width: 80%;
+	margin-left: 10%
+	}
+	#spinButton{
+		margin-left:30%;
+	}
+
+}
+
+@media screen and (orientation: portrait) {
+  #writtenContent{
+  	width:80%;
+  	margin: auto;
+  }
+  #wheel{
+  	margin-left:38%;
+  	margin-top: -15px;
+  		/*image resize: https://stackoverflow.com/questions/4684304/how-can-i-resize-an-image-dynamically-with-css-as-the-browser-width-height-chang*/
+	max-width: 500px;
+	width: 80%;
+  	height: auto;
+  	margin-bottom: 20px;
+  }
+   #images{
+  	width: 65%;
+  	height: auto;
+  }
+  #pointer{
+  	margin-top: 0px;
+  		/*image resize: https://stackoverflow.com/questions/4684304/how-can-i-resize-an-image-dynamically-with-css-as-the-browser-width-height-chang*/
+	max-width: 30px;
+
+	width: 30%;
+  	height: auto;
+  	margin-left: 70%;
+  }
+  h1{
+	text-align: center;
+	font-size: 2em;
+}
+h4{
+	text-align: center;
+	margin-top: -10px;
+	width: 80%;
+	margin-left: 10%;
+	font-size: .9em;
+}
+h2{
+	text-align: center;
+	margin-top: -10px;
+	width: 80%;
+	margin-left: 10%;
+	font-size: 1.2em;
+}
+#spinButton{
+	margin-left: 40%;
+
+}
+
+
+}
+
+
+#wheel{
+
+	-webkit-animation: spin1 5s infinite linear;
+-moz-animation: spin1 5s infinite linear;
+-o-animation: spin1 5s infinite linear;
+-ms-animation: spin1 5s infinite linear;
+animation: spin1 5s infinite linear;
+    display: block;
+    animation-play-state: paused;
+}
+ 
+@-webkit-keyframes spin1 {
+0% { -webkit-transform: rotate(0deg);}
+100% { -webkit-transform: rotate(359deg);}
+}
+@-moz-keyframes spin1 {
+0% { -moz-transform: rotate(0deg);}
+100% { -moz-transform: rotate(359deg);}
+}
+@-o-keyframes spin1 {
+0% { -o-transform: rotate(0deg);}
+100% { -o-transform: rotate(359deg);}
+}
+@-ms-keyframes spin1 {
+0% { -ms-transform: rotate(0deg);}
+100% { -ms-transform: rotate(359deg);}
+}
+@-keyframes spin1 {
+0% { transform: rotate(0deg);}
+100% { transform: rotate(359deg);}
+} 

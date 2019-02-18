@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Boulder Dinner Wheel</title>
+	<link rel="stylesheet" href="dinnerPicker.css">
+</head>
+<body>
+<h1 id="mainHeader">What's for dinner?</h1>
+<!--<h4>Picking a where to eat in Boulder can be difficult. Why not let the Boulder Dinner Wheel make the decision for you?</h4>-->
+<h1 id="place">You should eat at Illegal Pete's!</h1>
+
+<div id="images" class="content">
+	<img id="pointer" src="pointer.png" alt="A triangle to denote selected segment of wheel">
+	<br>
+	<img src="wheel.png"  id="wheel" alt="color wheel with dinner choices">
+</div>
+<div class="content" id="writtenContent">
+	<h2>Shake your phone or tap the wheel to figure out where to eat for dinner</h2>
+	<button id="spinButton">Spin!</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--used to test for device shake, from reference: http://qnimate.com/detect-shake-using-javascript/-->
+<script src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
+<!--<script src="math.js"></script>-->
+<script src="dinnerPicker.js"></script>
+</body>
+</html>
