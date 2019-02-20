@@ -9,8 +9,8 @@ h1, h2, h3, h4, h5, h6 {
 #place{
 	background: white;
 	font-size: 2.5em;
-  
-
+  width:70%;
+  margin:auto;
 }
 
 
@@ -22,13 +22,13 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   text-decoration: none;
   outline: none;
-  color:  #303030;
-  background-color: #4CAF50;
+  color:  #FFFFFF;
+  background-color: #484848;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
-#spinButton:hover {background-color: #3e8e41}
+#spinButton:hover {background-color: #303030}
 
 #spinButton:active {
   background-color: #202020;
@@ -42,28 +42,34 @@ h1, h2, h3, h4, h5, h6 {
   	float:left;
   }
   #writtenContent{
-  	width:35%;
-  	padding-top:5%;
+  	width:40%;
+  	padding-top:8%;
+    padding-left: -50px;
   }
   #wheel{
   	margin-top: -20px;
+    margin-left:10%;
   		/*image resize: https://stackoverflow.com/questions/4684304/how-can-i-resize-an-image-dynamically-with-css-as-the-browser-width-height-chang*/
 	max-width: 500px;
-	width: 65%;
+  /*width:65%;*/
+	width: 80%;
   	height: auto;
   }
   #images{
-  	width: 65%;
+    /*width: 55%;*/
+  	width: 50%;
   	height: auto;
+    margin-left:4%;
   }
   #pointer{
-  	margin-top: -20px;
+  	margin-top: 20px;
   		/*image resize: https://stackoverflow.com/questions/4684304/how-can-i-resize-an-image-dynamically-with-css-as-the-browser-width-height-chang*/
 	max-width: 30px;
 
 	width: 40%;
   	height: auto;
-  	margin-left: 28%;
+    margin-left: 45%;
+  	/*margin-left: 38%;*/
   }
 
   h1{
@@ -74,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	margin-top: -10px;
 	width: 80%;
-	margin-left: 10%
+	margin-left: -10%
 	}
 	#spinButton{
 		margin-left:30%;
@@ -101,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   	height: auto;
   }
   #pointer{
-  	margin-top: 0px;
+  	margin-top: 15px;
   		/*image resize: https://stackoverflow.com/questions/4684304/how-can-i-resize-an-image-dynamically-with-css-as-the-browser-width-height-chang*/
 	max-width: 30px;
 
@@ -112,6 +118,9 @@ h1, h2, h3, h4, h5, h6 {
   h1{
 	text-align: center;
 	font-size: 2em;
+}
+#place{
+  font-size: 2.3em;
 }
 h4{
 	text-align: center;
