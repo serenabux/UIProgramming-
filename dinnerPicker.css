@@ -8,7 +8,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #place{
 	background: white;
-	font-size: 2.5em;	
+	font-size: 2.5em;
+  
+
 }
 
 
@@ -20,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color:  #303030;
   background-color: #4CAF50;
   border: none;
   border-radius: 15px;
@@ -29,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 #spinButton:hover {background-color: #3e8e41}
 
 #spinButton:active {
-  background-color: #3e8e41;
+  background-color: #202020;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -41,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   #writtenContent{
   	width:35%;
-  	padding-top:12%;
+  	padding-top:5%;
   }
   #wheel{
   	margin-top: -20px;
@@ -136,13 +138,13 @@ h2{
 
 #wheel{
 
-	-webkit-animation: spin1 5s infinite linear;
--moz-animation: spin1 5s infinite linear;
--o-animation: spin1 5s infinite linear;
--ms-animation: spin1 5s infinite linear;
-animation: spin1 5s infinite linear;
-    display: block;
-    animation-play-state: paused;
+	-webkit-animation: spin1 3s infinite linear;
+-moz-animation: spin1 3s infinite linear;
+-o-animation: spin1 3s infinite linear;
+-ms-animation: spin1 3s infinite linear;
+animation: spin1 3s infinite linear;
+  display: block;
+  animation-play-state: paused;
 }
  
 @-webkit-keyframes spin1 {

@@ -6,7 +6,7 @@
 
     window.addEventListener('shake', function(){
         alert("Shaked");
-        pasusePlayAnimation
+        pasusePlayAnimation();
     }, false);
 
     //stop listening
@@ -35,10 +35,41 @@ $("#spinButton").click(function(){
 });
 
 function pasusePlayAnimation(){
-    if(document.getElementById("wheel").style.animationPlayState == "running"){
-        document.getElementById("wheel").style.animationPlayState = "paused";
+    var randTime = Math.floor((Math.random() * 8000) + 1000);
+    switch(true){
+        case (randTime<2000):{
+            console.log("<2000");
+            break;
+        }
+        case (randTime<3000):{
+            console.log("<3000");
+            break;
+        }
+        case (randTime<4000):{
+            console.log("<4000");
+            break;
+        }
+        case (randTime<5000):{
+            console.log("<5000");
+            break;
+        }
+        case (randTime<6000):{
+            console.log("<7000");
+            break;
+        }
+        case (randTime<7000):{
+            console.log("<7000");
+            break;
+        }
+        default: {
+            console.log(randTime);
+            break;
+        }
     }
-    else{
-          document.getElementById("wheel").style.animationPlayState = "running";
-    }
+    setTimeout(stopAnimation, randTime) //referenced from https://www.w3schools.com/js/js_timing.asp
+    document.getElementById("wheel").style.animationPlayState = "running";
+}
+
+function stopAnimation(){
+    document.getElementById("wheel").style.animationPlayState = "paused";
 }
