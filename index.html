@@ -3,20 +3,31 @@
 <head>
 	<title>Boulder Dinner Wheel</title>
 	<link rel="stylesheet" href="dinnerPicker.css">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 <body>
-<h1 id="mainHeader">What's for dinner?</h1>
-<!--<h4>Picking a where to eat in Boulder can be difficult. Why not let the Boulder Dinner Wheel make the decision for you?</h4>-->
-<h1 id="place">You should eat at ???</h1>
+<h1 id="mainHeader" role="banner">What's for dinner?</h1>
+<div role="main">
+	<div id="spinContent">
+		<!--<button id="help"> ? </button>-->
+		<h1 id="place">You should eat at ???</h1>
+		<!--<h4 id="rotating">The decision wheel is now rotating and will stop randomly on a resturant. You will be alerted when the resturant is chosen.</h4>-->
+		<div id="images" class="content">
+			<img id="pointer" src="pointer.png" alt="A triangle to denote selected segment of wheel">
+			<br>
+			<!--Add a paragraph on screen dynamically when the wheel is triggered, have Aria-live= alert to alert a screen reader of the animation -->
+			<img src="wheel.png" longdesc="The wheel contains Illegal Pete's, Rincon Argentino, Zoe Ma Ma, Snarf's, Noodles and Compnay, Cafe Mexicali, Boss Lady Pizza, and Garbonzo." id="wheel" alt="color wheel with dinner choices">
+		</div>
+		<div class="content" id="writtenContent">
+			<h2>Shake your device or tap the button to figure out where to eat for dinner</h2>
+			<button id="spinButton">Spin!</button>
+		</div>
+	</div>
+	<!--<div id="helpContent">
+		<h2>The purpose of this website is to randomly choose a restuarnt between eight restuarnts. It is currently choosing between Illegal Pete's, Rincon Argentino, Zoe Ma Ma, Snarfs, Noodles & Company, Cafe Mexicali, Garbonzo, and Boss Lady Pizza.</h2>
+		<h2>There is a color wheel with these resturaunts listed on them. The wheel can be spun by shaking the device or by tapping the 'Spin!' button. The wheel then spins for a random amount of time and then will present the restuarant corresponding to where the wheel stopped spinning.</h2>
 
-<div id="images" class="content">
-	<img id="pointer" src="pointer.png" alt="A triangle to denote selected segment of wheel">
-	<br>
-	<img src="wheel.png"  id="wheel" alt="color wheel with dinner choices">
-</div>
-<div class="content" id="writtenContent">
-	<h2>Shake your device or tap the button to figure out where to eat for dinner</h2>
-	<button id="spinButton">Spin!</button>
+	</div>-->
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

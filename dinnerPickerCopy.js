@@ -1,6 +1,6 @@
-  var fastCasual = ["Illegal Pete's", "Rincon Argentino", "Zoe Ma Ma", "Snarfs", "Noodles & Company", "Cafe Mexicali", "Boss Lady Pizza", "Garbonzo"]
+  var fastCasual = ["Illegal Pete's", "Rincon Argentino", "Zoe Ma Ma", "Snarfs", "Noodles and Company", "Cafe Mexicali", "Boss Lady Pizza", "Garbonzo"]
   //var fastCasual = ["Red", "Pink", "Purple", "Blue", "LBlue", "Green", "Yellow", "Orange"];
-  var currentSpot = -194;
+  var currentSpot = -192;
 
   //listen to shake event
     var shakeEvent = new Shake({threshold: 15});
