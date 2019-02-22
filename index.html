@@ -3,13 +3,16 @@
 <head>
 	<title>Boulder Dinner Wheel</title>
 	<link rel="stylesheet" href="dinnerPicker.css">
-	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" /> <!--https://www.w3schools.com/tags/tag_meta.asp-->
 </head>
 <body>
-<h1 id="mainHeader" role="banner">What's for dinner?</h1>
-<div role="main">
+	<div id="navigation">
+		<button id="homeButton" class="tab">Dinner Wheel</button>
+		<button id="helpButton" class="tab">Help</button>
+	</div>
+<div role="main" id="main">
 	<div id="spinContent">
-		<!--<button id="help"> ? </button>-->
+		<h1 id="mainHeader" role="banner">What's for Dinner?</h1>
 		<h1 id="place">You should eat at ???</h1>
 		<!--<h4 id="rotating">The decision wheel is now rotating and will stop randomly on a resturant. You will be alerted when the resturant is chosen.</h4>-->
 		<div id="images" class="content">
@@ -19,15 +22,42 @@
 			<img src="wheel.png" longdesc="The wheel contains Illegal Pete's, Rincon Argentino, Zoe Ma Ma, Snarf's, Noodles and Compnay, Cafe Mexicali, Boss Lady Pizza, and Garbonzo." id="wheel" alt="color wheel with dinner choices">
 		</div>
 		<div class="content" id="writtenContent">
-			<h2>Shake your device or tap the button to figure out where to eat for dinner</h2>
+			<h2 id="shake">Shake your device or tap the button to figure out where to eat for dinner</h2>
 			<button id="spinButton">Spin!</button>
 		</div>
 	</div>
-	<!--<div id="helpContent">
-		<h2>The purpose of this website is to randomly choose a restuarnt between eight restuarnts. It is currently choosing between Illegal Pete's, Rincon Argentino, Zoe Ma Ma, Snarfs, Noodles & Company, Cafe Mexicali, Garbonzo, and Boss Lady Pizza.</h2>
-		<h2>There is a color wheel with these resturaunts listed on them. The wheel can be spun by shaking the device or by tapping the 'Spin!' button. The wheel then spins for a random amount of time and then will present the restuarant corresponding to where the wheel stopped spinning.</h2>
-
-	</div>-->
+	<div id="helpContent">
+		<h1>What's for Dinner Help</h1>
+		<p>The purpose of What's for dinner is to randomly choose a Boulder restuarnt between eight restuarnts. It is currently programmed for fast casual resturants and to chooses between Illegal Pete's, Rincon Argentino, Zoe Ma Ma, Snarfs, Noodles & Company, Cafe Mexicali, Garbonzo, and Boss Lady Pizza.</p>
+		<p>There is a color wheel with these resturaunts listed on them. The wheel can be spun by shaking the device or by tapping the 'Spin!' button. The wheel then spins for a random amount of time and then updates the user with the restuarant corresponding to what part of the wheel was under the selector when it stopped spinning.</p>
+		<p>If you would like to disable the color wheel and only have the resturant generation occur uncheck the checkbox below.</p>
+		<label class="switch"> Use color wheel
+  			<input type="checkbox" checked>
+  			<span class="slider round"></span>
+		</label>
+		<br>
+		<br>
+		<br>
+		<h2>Keyboard Shortcuts</h2>
+		<table>
+			<tr>
+				<th>Key</th>
+				<th>Action</th>
+			</tr>
+			<tr>
+				<td>'s'</td>
+				<td>Spin wheel/generate restuarnt</td>
+			</tr>
+			<tr>
+				<td>'h'</td>
+				<td>Help page</td>
+			</tr>
+			<tr>
+				<td>'w'</td>
+				<td>What's for dinner main page</td>
+			</tr>
+		</table>
+	</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
