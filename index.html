@@ -6,13 +6,13 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport" /> <!--https://www.w3schools.com/tags/tag_meta.asp-->
 </head>
 <body>
-	<div id="navigation">
-		<button id="homeButton" class="tab">Dinner Wheel</button>
-		<button id="helpButton" class="tab">Help</button>
+	<div id="navigation" role="navigation">
+		<button id="homeButton" class="tab" accesskey="w">Dinner Wheel</button>
+		<button id="helpButton" class="tab" accesskey="h">Help</button>
 	</div>
-<div role="main" id="main">
+<div role="main" id="mainContent" aria-live="polite">
 	<div id="spinContent">
-		<h1 id="mainHeader" role="banner">What's for Dinner?</h1>
+		<h1 id="mainHeader">What's for Dinner?</h1>
 		<h1 id="place">You should eat at ???</h1>
 		<!--<h4 id="rotating">The decision wheel is now rotating and will stop randomly on a resturant. You will be alerted when the resturant is chosen.</h4>-->
 		<div id="images" class="content">
@@ -22,19 +22,15 @@
 			<img src="wheel.png" longdesc="The wheel contains Illegal Pete's, Rincon Argentino, Zoe Ma Ma, Snarf's, Noodles and Compnay, Cafe Mexicali, Boss Lady Pizza, and Garbonzo." id="wheel" alt="color wheel with dinner choices">
 		</div>
 		<div class="content" id="writtenContent">
+			<p hidden="true" aria-live="polite" id="screenReader"></p>
 			<h2 id="shake">Shake your device or tap the button to figure out where to eat for dinner</h2>
-			<button id="spinButton">Spin!</button>
+			<button id="spinButton" accesskey="s">Spin!</button>
 		</div>
 	</div>
-	<div id="helpContent">
+	<div id="helpContent" aria-live="polite" role="main">
 		<h1>What's for Dinner Help</h1>
 		<p>The purpose of What's for dinner is to randomly choose a Boulder restuarnt between eight restuarnts. It is currently programmed for fast casual resturants and to chooses between Illegal Pete's, Rincon Argentino, Zoe Ma Ma, Snarfs, Noodles & Company, Cafe Mexicali, Garbonzo, and Boss Lady Pizza.</p>
 		<p>There is a color wheel with these resturaunts listed on them. The wheel can be spun by shaking the device or by tapping the 'Spin!' button. The wheel then spins for a random amount of time and then updates the user with the restuarant corresponding to what part of the wheel was under the selector when it stopped spinning.</p>
-		<p>If you would like to disable the color wheel and only have the resturant generation occur uncheck the checkbox below.</p>
-		<label class="switch"> Use color wheel
-  			<input type="checkbox" checked>
-  			<span class="slider round"></span>
-		</label>
 		<br>
 		<br>
 		<br>

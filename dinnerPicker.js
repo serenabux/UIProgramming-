@@ -2,6 +2,8 @@
   //var fastCasual = ["Red", "Pink", "Purple", "Blue", "LBlue", "Green", "Yellow", "Orange"];
   var currentSpot = -194;
 
+
+
 $(document).ready(function(){ // do when doc loads 
     $("#spinContent").show(); 
     $("#helpContent").hide(); 
@@ -26,16 +28,16 @@ $('#homeButton').click(function(){
 
   //listen to shake event
     var shakeEvent = new Shake({threshold: 15});
+    var smallerShakeEvent = new Shake({threshold: 10});
+
     shakeEvent.start();
+    smallerShakeEvent.start();
 
     window.addEventListener('shake', function(){
+        is 
         pasusePlayAnimation();
     }, false);
 
-    //stop listening
-    function stopShake(){
-        shakeEvent.stop();
-    }
 
     //check if shake is supported or not.https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
     if(!("ondevicemotion" in window)){console.log("not supported");}
@@ -61,9 +63,13 @@ function pasusePlayAnimation(){
     var scaledRandTime = (randTime+currentSpot) - Math.floor((randTime+currentSpot)/3000)*3000;
 
     currentSpot = scaledRandTime;
+    var checkedValue = $('#disable').val();
     console.log(randTime);
     console.log(scaledRandTime);
-    setTimeout(stopAnimation, randTime) //referenced from https://www.w3schools.com/js/js_timing.asp
+    document.getElementById("screenReader").innerHTML= "There is an animation of a decision wheel spinning, your suggested resturant will be avalible shortly."
+    setTimeout(stopAnimation, randTime)
+    //if(checkedValue=='on') setTimeout(stopAnimation, randTime) //referenced from https://www.w3schools.com/js/js_timing.asp
+    //else stopAnimation;
     document.getElementById("wheel").style.animationPlayState = "running";
 }
 
@@ -105,6 +111,7 @@ function stopAnimation(){
         }
     }
     document.getElementById("place").innerHTML = newHeading;
+        document.getElementById("screenReader").innerHTML="";
 }
 
 function updateHeading(){
