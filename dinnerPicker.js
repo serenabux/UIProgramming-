@@ -1,6 +1,6 @@
   var fastCasual = ["Illegal Pete's", "Rincon Argentino", "Zoe Ma Ma", "Snarfs", "Noodles & Company", "Cafe Mexicali", "Boss Lady Pizza", "Garbonzo"]
   //var fastCasual = ["Red", "Pink", "Purple", "Blue", "LBlue", "Green", "Yellow", "Orange"];
-  var currentSpot = -194;
+  var currentSpot = -196;
 
 
 
@@ -28,10 +28,8 @@ $('#homeButton').click(function(){
 
   //listen to shake event
     var shakeEvent = new Shake({threshold: 15});
-    var smallerShakeEvent = new Shake({threshold: 10});
 
     shakeEvent.start();
-    smallerShakeEvent.start();
 
     window.addEventListener('shake', function(){
         is 
