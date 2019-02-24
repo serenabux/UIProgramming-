@@ -28,13 +28,17 @@ $('#homeButton').click(function(){
 
   //listen to shake event
     var shakeEvent = new Shake({threshold: 15});
-
     shakeEvent.start();
 
     window.addEventListener('shake', function(){
-        is 
         pasusePlayAnimation();
     }, false);
+
+    //stop listening
+    function stopShake(){
+        shakeEvent.stop();
+    }
+
 
 
     //check if shake is supported or not.https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
