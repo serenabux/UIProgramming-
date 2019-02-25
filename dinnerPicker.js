@@ -1,5 +1,5 @@
   var fastCasual = ["Illegal Pete's", "Rincon Argentino", "Zoe Ma Ma", "Snarfs", "Noodles & Company", "Cafe Mexicali", "Boss Lady Pizza", "Garbonzo"]
-  //var fastCasual = ["Red", "Pink", "Purple", "Blue", "LBlue", "Green", "Yellow", "Orange"];
+  //Current spot accounts for the slight tilt in the inital starting spot of the spinner 
   var currentSpot = -196;
 
 
@@ -11,14 +11,14 @@ $(document).ready(function(){ // do when doc loads
     $("#homeButton").addClass("current-tab");
 });
 
-$('#helpButton').click(function(){
+$('#helpButton').click(function(){ //trigger the help tab
     $("#spinContent").hide(); 
     $("#helpContent").show(); 
     $("#helpButton").addClass("current-tab");
     $("#homeButton").removeClass("current-tab");
 });
 
-$('#homeButton').click(function(){
+$('#homeButton').click(function(){ //load the main page on button press
     $("#spinContent").show(); 
     $("#helpContent").hide(); 
     $("#helpButton").removeClass("current-tab");
@@ -30,7 +30,7 @@ $('#homeButton').click(function(){
     var shakeEvent = new Shake({threshold: 15});
     shakeEvent.start();
 
-    window.addEventListener('shake', function(){
+    window.addEventListener('shake', function(){ //if shaked call the pause/ play function to trigger the animation/ resturant generation
         pasusePlayAnimation();
     }, false);
 
@@ -61,23 +61,19 @@ function pasusePlayAnimation(){
     //range for each spot is 375 milliseconds at the speed of 3s per rotation
     //it first changes colors at 195
     //need to account for where starting from, in case spun again
-    //TODO: fix edge cases
+    //scale it so that regardless of how many times it goes around it maps to just once time wise
     var scaledRandTime = (randTime+currentSpot) - Math.floor((randTime+currentSpot)/3000)*3000;
-
-    currentSpot = scaledRandTime;
-    var checkedValue = $('#disable').val();
-    console.log(randTime);
-    console.log(scaledRandTime);
+    currentSpot = scaledRandTime; //update where it ended to be used next time
+    //set paragraph that doesn't show up for screen reader 
     document.getElementById("screenReader").innerHTML= "There is an animation of a decision wheel spinning, your suggested resturant will be avalible shortly."
-    setTimeout(stopAnimation, randTime)
-    //if(checkedValue=='on') setTimeout(stopAnimation, randTime) //referenced from https://www.w3schools.com/js/js_timing.asp
-    //else stopAnimation;
+    setTimeout(stopAnimation, randTime); //After the random amount of time in milliseconds tell tje animation to stop
     document.getElementById("wheel").style.animationPlayState = "running";
 }
 
 function stopAnimation(){
     document.getElementById("wheel").style.animationPlayState = "paused";
      var newHeading = "You should eat at ";
+     //msp to proper resturant 
     switch(true){ 
         case (currentSpot < 375  ):{
             newHeading += fastCasual[0];
@@ -114,8 +110,4 @@ function stopAnimation(){
     }
     document.getElementById("place").innerHTML = newHeading;
         document.getElementById("screenReader").innerHTML="";
-}
-
-function updateHeading(){
-    document.getElementById("place").innerHTML = newHeading;
 }
